@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Flask App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='top_bar_styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="top-box">
+        <div class="icon" id="nav-icon">☰</div>
+        <!-- <div class="user-info">User Photo or Quick Links</div> -->
+		 <!-- <img src="{{ url_for('static', filename='profile_pic.jpg') }}" alt="Profile Picture" width="60" height="40"> -->
+
+
+    </div>
+    
+    <nav id="sidebar" class="sidebar">
+        <ul>
+            <!-- put new icon vertically--> 
+             
+            <!-- <div class="icon" id="icon">=</div> -->
+            <!-- <li><a href="{{ url_for('home') }}">Home</a></li> -->
+            <li class="{{ 'active' if request.path == '/' else '' }}"><a href="/">Home</a></li>
+            <!-- <li class="{{ 'active' if request.path == '/all_pnl_o' else '' }}"><a href="/all_pnl_o">All P & L</a></li>
+			<li class="{{ 'active' if request.path == '/market_data' else '' }}"><a href="/market_data">Market Data</a></li>
+			<li class="{{ 'active' if request.path == '/statical_report' else '' }}"><a href="/statical_report">Statical Reports</a></li>
+			<li class="{{ 'active' if request.path == '/calendar_view' else '' }}"><a href="/calendar_view">Calendar View</a></li>
+			<li class="{{ 'active' if request.path == '/trades' else '' }}"><a href="/trades">Trade Logs</a></li>
+			<li class="{{ 'active' if request.path == '/colored_theme' else '' }}"><a href="/colored_theme">Theme of The Pages</a></li>
+			-->
+			
+            <!-- <li class="{{ 'active' if request.path == '/basic_analysis' else '' }}"><a href="/basic_analysis">Fundamentals Analysis</a></li> -->
+            <li class="{{ 'active' if request.path == '/utility_exch' else '' }}"><a href="/utility_exch">Exchange Utility</a></li>
+            <li class="{{ 'active' if request.path == '/basic_analysis_n' else '' }}"><a href="/basic_analysis_n">Fundamentals Analysis</a></li> 
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#nav-icon').click(function() {
+                $('#sidebar').toggleClass('active');
+            });
+            $(document).click(function(event) {
+                if (!$(event.target).closest('#sidebar, #nav-icon').length) {
+                    $('#sidebar').removeClass('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

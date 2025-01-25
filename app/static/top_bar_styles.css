@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+}
+
+.top-box {
+    width: 96%;
+    /* background-color: #333; */
+    /*background-color:  rgba(214, 231, 231, 0.877); *//*#df7272; */
+	background: rgba(255, 255, 255, 0.2);  /* Semi-transparent white */
+	backdrop-filter: blur(10px);  /* Frosted glass effect with blur */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+	border-radius :15px;
+    
+    /*border: 1px solid #ccc;    */
+    border: 1px solid rgba(255, 255, 255, 0.3);  /* Subtle white border with low opacity */
+	/*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  Subtle shadow */
+	
+    color: #333; /* Default text color */
+
+    /* color: white; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    padding: 10px;
+    height: 30px;
+    position: fixed; /* Fix to top */
+    top: 0; /* Position at the top */
+    margin-left: 20px;
+    margin-top: 3px;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.icon {
+    cursor: pointer;
+}
+img {
+            border-radius: 20px;  /* Optional: adds rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Optional: adds a soft shadow */
+        }
+
+.sidebar {
+    position: fixed;
+    margin-left: 15px;
+    top: 50px; /* Adjust this to account for the height of the top bar */
+    left: -250px; /* Hide by default */
+    width: 230px;
+    
+	
+    
+	
+
+    background: rgba(255, 255, 255, 0.1);  /* Slightly transparent white */
+    backdrop-filter: blur(15px);  /* Stronger blur for frosted glass effect */
+    border-right: 1px solid rgba(255, 255, 255, 0.2);  /* Subtle border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Soft shadow on the right */
+
+
+
+    align-items: center; /* Center the items horizontally */
+    height: calc(95% - 50px); /* Full height minus top bar height */
+    /* background-color: #444; */
+	
+    /*background-color:  rgba(214, 231, 231, 0.877); */
+    /*border: 1px solid #ccc;    */
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); *//* Subtle shadow */
+    
+
+    border-radius :15px;
+    
+    
+    color: #333; /* Default text color */
+    transition: left 0.3s ease;
+    z-index: 1000; /* Ensure it stays above other content */
+    margin-top: 10px;
+    
+}
+
+.sidebar.active {
+    left: 0; /* Show when active */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #333; /* Default text color */
+    border-radius: 5px; /* Match the li rounding */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+
+}
+
+
+
+.sidebar ul li a:hover {
+    /* background-color: #555; */
+    background-color: lightblue; /* Light blue when hovered */
+    color: #fff; /* White text on hover */
+}
+
+.content {
+    margin-top: 60px; /* Add margin to avoid overlap with fixed top box */
+}
+
+
+
+
+
+/* ---------------- */
+ 
+    .sidebar .active a {
+        background-color: rgba(82, 82, 196, 0.89); /* Dark blue for active page */
+        color: #fff; /* White text for active page */
+
+    }

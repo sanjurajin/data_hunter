@@ -1,0 +1,100 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	 background: linear-gradient(135deg, 
+		#e53935 5%,  /* Red */
+		#d81b60 20%,  /* Pink */
+		#8e24aa 50%,  /* Purple */
+		#1e88e5 70%,  /* Blue */
+		#42a5f5 85%,  /* Light Blue */
+		#26c6da 100%  /* Cyan */
+		);
+	
+	background-size: 200% 200%;
+	/*animation: gradientBackground 15s ease infinite;*/
+		}
+/* ------------------------------------------------------------------*/
+        
+/* STYLES FOR DESHBOARD PAGE */
+/* PART - 1 */
+.main {
+    flex: 1; /*Take the remaining width*/
+    padding: 20px; /* Padding around main content */
+    /* width: 700px; */
+    margin-top: 20px;
+}
+
+h1 {
+    margin: 0; /* Remove margin from h3 */
+    text-align: left;
+    color: white;
+    z-index: 1000;   
+    
+}
+.last_trade_dates {
+    /*background-color: rgb(99, 139, 192); /* Box background */
+    /* border: 1px solid rgb(192, 75, 157); Border color */
+    background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.3);  /* Soft white border */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+	
+	
+	
+	/*border: 2px solid #ccc;    */
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); *//* Subtle shadow */
+
+	
+    border-radius: 15px; /* Rounded corners */
+    
+    display: flex; /* Flex layout for kids */
+    /*flex-wrap: wrap; /* Allow charts to wrap if needed */
+    align-items: center; /* Center content vertically */
+    /*justify-content: center; /* Center content horizontally */
+    color: white; /* Text color */
+    position: relative; /* Needed for positioning the pseudo-element */
+    /*background-color: rgba(214, 231, 231, 0.877); *//* Box background */
+    justify-content: space-between; /* Space out the child boxes */
+    
+    padding: 10px; /* Padding inside the box */
+    margin-bottom: 20px; /* Margin below the box */
+    height: 80px; /* Fixed height */
+    width: 98%; /* Full width */
+    
+
+}
+
+
+
+/* 2A----------------------------------------------------------------------*/ 
+
+/*--------PART - 3---------------------------------*/
+.equity_curve_chart {
+    /*border: 2px solid #ccc;    */
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); *//* Subtle shadow */
+	/*background-color: rgba(214, 231, 231, 0.877); *//* Optional: background color for better visibility */
+	
+	
+	
+	background-color: rgba(255, 255, 255, 0.5);  /* Semi-transparent white background */
+	border: 1px solid rgba(255, 255, 255, 0.3);  /* Soft white border */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+	
+    
+    border-radius: 15px;    /* Adjust as needed for rounding */
+    /* padding: 5px;          Space between the border and the canvas */
+    /* margin: 10px 0;        Space around the chart section */
+    
+    height: 300px;         /* Set height */
+    max-width: 100%;
+    display: flex;         /* Flexbox to center content if needed */
+    justify-content: center; /* Center horizontally */
+    align-items: center;   /* Center vertically */
+    /* width: 98%; Full width */
+    /* color: white; Text color */
+    margin-bottom: 20px; /* Margin below the box */
+    position: relative; /*Needed for positioning the pseudo-element*/
+    
+
+}
