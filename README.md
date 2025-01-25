@@ -1,6 +1,6 @@
 
 
-Please copy he folder.
+Please copy the folder.
 
 1. Create python environment using
 for ubunto only --> sudo apt install python3-venv
